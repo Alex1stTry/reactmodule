@@ -1,10 +1,10 @@
-import React from 'react';
-import PostsComponent from "./components/PostsComponent";
+import Posts from "./components/Posts";
+
 
 const App = () => {
     return (
         <div>
-          <PostsComponent/>
+         <Posts/>
         </div>
     );
 };
