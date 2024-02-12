@@ -1,13 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import {spaceXService} from "../services/spaceX.service";
-import launch from "./Launch";
+
 import Launch from "./Launch";
 
 const Launches = () => {
 
     let [launches, setLaunches] = useState([]);
     useEffect(() => {
-        spaceXService.getAll().then(({data}) => setLaunches(data))
+        spaceXService.getAll().then(({data}) => {
+            const filtered = data.filter(item => item.launch_year !== '2020');
+                setLaunches(filtered)
+        })
     }, []);
 
     return (

@@ -2,6 +2,6 @@ import axios from "axios";
 
 import {baseURL} from "../consts/consts";
 
-const axiosService = axios.create({baseURL})
+const axiosInstance = axios.create({baseURL})
 
-export {axiosService}
+export {axiosInstance}
