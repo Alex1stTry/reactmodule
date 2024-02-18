@@ -1,12 +1,13 @@
 import React from 'react';
-import {CommentContainer} from "./Components/CommentContainer";
+
+import {CarContainer} from "./components/CarContainer";
 
 
 
 const App = () => {
     return (
         <div>
-            <CommentContainer/>
+            <CarContainer/>
         </div>
     );
 };
