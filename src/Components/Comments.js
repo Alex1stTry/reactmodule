@@ -1,8 +1,5 @@
 import React from 'react';
-
 import {Comment} from "./Comment";
-
-
 
 const Comments = ({comments}) => {
     return (
@@ -12,4 +9,4 @@ const Comments = ({comments}) => {
     );
 };
 
-export {Comments}
+export  {Comments};

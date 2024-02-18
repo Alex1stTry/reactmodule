@@ -1,10 +1,11 @@
 import React from 'react';
 import {useForm} from "react-hook-form";
+import {commentsService} from "../services/commentsService";
 
-const CommentForm = () => {
+const CommentForm = ({setComments}) => {
     const {register, handleSubmit} = useForm()
     const post = (post) => {
-
+       commentsService.create(post).then(({data})=> setComments(prev=>[...prev,data]))
     }
     return (
         <div>
