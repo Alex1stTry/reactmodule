@@ -1,13 +1,11 @@
 import React from 'react';
 
-
-
-const App = () => {
+const CommentContainer = () => {
     return (
         <div>
-            <Comments/>
+            
         </div>
     );
 };
 
-export {App};
+export {CommentContainer};

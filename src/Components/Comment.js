@@ -1,14 +1,15 @@
 import React from 'react';
 
-const User = ({user}) => {
-    const {id,name,email} = user
+const Comment = ({comment}) => {
+    const {id, name, body} = comment
     return (
         <div>
             <div>id: {id}</div>
             <div>name: {name}</div>
-            <div>email: {email}</div>
+            <div>body: {body}</div>
+            <hr/>
         </div>
     );
 };
 
-export default User;
+export {Comment};
