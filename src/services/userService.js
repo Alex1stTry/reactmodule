@@ -1,8 +1,9 @@
 import {apiService} from "./apiService";
-import {urls} from "../constans/consts";
+import {urls} from "../constans/urls";
 
 const userService = {
-    saveUser: (data)=> apiService.post(urls.users, data)
+    setUser: (data)=> apiService.post(urls.users, data),
+    getAll: ()=> apiService.get(urls.users)
 }
 
 export {userService}
