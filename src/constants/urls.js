@@ -10,7 +10,7 @@ const urls ={
     comments,
     albums,
     posts : {
-        byId:(id)=>`${posts}${id}`
+        byId:(id)=>`${posts}/${id}`
     }
 }
 export {baseURL,urls}
