@@ -3,6 +3,10 @@ import {MainLayout} from "./layouts/MainLayout";
 import {UsersPage} from "./Pages/UsersPage";
 
 import {UserDetailsPage} from "./Pages/UserDetailsPage";
+import {PostsPage} from "./Pages/PostsPage";
+import {PostDetails} from "./Components/PostsContainer/PostDetails";
+import {PostDetailsPage} from "./Pages/PostDetailsPage";
+import {CommentsPage} from "./Pages/CommentsPage";
 
 const router = createBrowserRouter([
     {
@@ -14,11 +18,20 @@ const router = createBrowserRouter([
                 path: 'users', element: <UsersPage/>
             },
             {
-                path: 'users/:id', element: <UserDetailsPage/>
+                path: 'userDetails/:id', element: <UserDetailsPage/>, children:[
+                    {
+                        path:'posts', element:<PostsPage/>
+                    }
+                ]
+            },
+            {
+                path:'postDetails/:id', element:<PostDetailsPage/>, children:[
+                    {
+                        path:'comments',element: <CommentsPage/>
+
+                    }
+                ]
             }
-
-
-
 
         ]
     }
