@@ -1,0 +1,11 @@
+.episodes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin: 4px 4px;
+}
+.buttons{
+    gap: 4px;
+    display: flex;
+    justify-content: center;
+}
