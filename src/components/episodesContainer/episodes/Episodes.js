@@ -24,8 +24,8 @@ const Episodes = () => {
                 {episodes.results.map(episode=><Episode key={episode.id} episode={episode}/>)}
             </div>
             <div className={css.buttons}>
-                <button onClick={prevPage}>Prev</button>
-                <button onClick={nextPage}>Next</button>
+                <button disabled={!episodes.prev} onClick={prevPage}>Prev</button>
+                <button disabled={!episodes.next} onClick={nextPage}>Next</button>
             </div>
         </div>
     );
