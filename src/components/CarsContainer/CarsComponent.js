@@ -6,15 +6,16 @@ import {CarComponent} from "./CarComponent";
 
 
 const CarsComponent = () => {
-    const {car} = useSelector(state => state.cars);
+    const {cars, trigger} = useSelector(state => state.cars);
     const dispatch = useDispatch();
+
     useEffect(() => {
-        carService.getAll().then(({data})=>dispatch(carActions.setResponse(data)))
-    }, []);
+        carService.getAll().then(({data}) => dispatch(carActions.setResponse(data)))
+    }, [dispatch, trigger]);
 
     return (
         <div>
-            {car.map(car=><CarComponent key={car.id} car={car}/>)}
+            {cars.map(car => <CarComponent key={car.id} car={car}/>)}
         </div>
     );
 };

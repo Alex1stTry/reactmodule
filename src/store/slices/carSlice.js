@@ -2,27 +2,26 @@ import {createSlice} from "@reduxjs/toolkit";
 
 
 const initialState = {
-    car: [],
-    id: null,
-    brand: null,
-    price: null,
-    year: null
-
+    cars: [],
+    trigger:null,
+    carUpdate:null,
 }
 const carSlice = createSlice({
     name: 'carSlice',
     initialState,
     reducers: {
         setResponse: (state, action) => {
-            const {id, brand, price, year} = action.payload;
-            state.id = id
-            state.brand = brand
-            state.price = price
-            state.year = year
+            state.cars = action.payload;
+        },
+        trigger:state=> {
+            state.trigger = !state.trigger
+        },
+        carUpdate: (state,action)=>{
+            state.carUpdate = action.payload
         }
     }
 });
-const {reduce: carReducer, actions} = carSlice
+const {reducer: carReducer, actions} = carSlice
 const carActions = {
     ...actions
 }
