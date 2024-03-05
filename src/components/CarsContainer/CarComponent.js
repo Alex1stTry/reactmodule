@@ -1,11 +1,11 @@
 import React from 'react';
 
-const App = () => {
+const CarComponent = () => {
     return (
         <div>
-          
+            
         </div>
     );
 };
 
-export default App;
+export {CarComponent};
