@@ -31,7 +31,7 @@ const episodesSlice = createSlice({
                 state.episodes = results
                 state.prevPage = prev
                 state.nextPage = next
-
+console.log(results)
             })
 });
 const {reducer: episodesReducer, actions} = episodesSlice

@@ -3,19 +3,17 @@ import {useSelector} from "react-redux";
 import {useSearchParams} from "react-router-dom";
 
 const EpisodesPagination = () => {
-    const {prevPage, nextPage} = useSelector(state => state.episodes);
-
     const [, setQuery] = useSearchParams({page: '1'})
+    const {prevPage,nextPage} = useSelector(state => state.episodes);
     const prev = () => {
-        setQuery(value => {
-            value.set('page', (+value.get('page') - 1).toString())
-            return value
+
+        setQuery(prev => {
+            prev.set('page', (+prev.get('page') - 1).toString())
         })
     }
     const next = () => {
-        setQuery(value => {
-            value.set('page', (+value.get('page') + 1).toString())
-            return value
+        setQuery(prev => {
+            prev.set('page', (+prev.get('page') + 1).toString())
         })
     }
     return (

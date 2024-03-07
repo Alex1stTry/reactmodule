@@ -1,10 +1,12 @@
 import {configureStore} from "@reduxjs/toolkit";
 
-import {episodesReducer} from "./slices";
+import {charReducer, episodesReducer} from "./slices";
 
 const store = configureStore({
     reducer:{
-        episodes: episodesReducer
+        episodes: episodesReducer,
+        characters : charReducer
+
     }
 })
 export {store}
