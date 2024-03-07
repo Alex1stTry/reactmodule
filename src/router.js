@@ -1,6 +1,8 @@
 import {createBrowserRouter, Navigate} from "react-router-dom";
+
 import {MainLayout} from "./MainLayouts/MainLayout";
-import {EpisodesPage} from "./pages";
+import {EpisodesPage,CharactersPage} from "./pages";
+
 
 
 const router = createBrowserRouter([
